@@ -28,18 +28,70 @@ h1, h2, h3 {
   color: white;
 }
 
-section:first-of-type div, section:first-of-type div * {
-  display: inline;
+section#intro-group {
+  display: inline-block;
   margin-left: 8px;
+}
+
+section#intro-group h2 {
+  margin: 0.23em 0 4px 0;
+  font-size: 2.2em;
+}
+
+div#social i {
+  font-size: 2em;
+  margin-right: 4px;
+  text-decoration: none;
 }
 
 section:first-of-type img {
   border-radius: 50%;
+  float: left;
   transition: border-radius ease-in-out 50ms;
   vertical-align: middle;
   width: 100px;
 }
 
+section:first-of-type p {
+  clear: left;
+}
+
 section:first-of-type img:hover {
   border-radius: 25%;
+}
+
+i.fa-discord {
+  color: #7289DA;
+  position: relative;
+}
+
+i.fa-twitter {
+  color: #1da1f3;
+}
+
+i.fa-github {
+  color: white;
+}
+
+i.fa-linkedin {
+  color: #0077b5;
+}
+
+div#social i.fa-discord span#discord-floater {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.5em;
+  left: 2.2em;
+  opacity: 0;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  transition: opacity 500ms linear;
+  visibility: hidden;
+}
+
+div#social i.fa-discord:hover span#discord-floater {
+  opacity: 1;
+  visibility: visible;
 }
