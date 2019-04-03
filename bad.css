@@ -1,0 +1,60 @@
+body {
+    background: olivedrab;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+table, td {
+    border: white 2px dotted;
+}
+
+table tr td:first-child {
+    width: 200px;
+}
+
+table tr:nth-child(2) td:nth-child(2) {
+    padding: 8px;
+}
+
+table tr:nth-child(2) td:first-child {
+    vertical-align: top;
+}
+
+table tr:nth-child(2) td:first-child div {
+    text-align: center;
+}
+
+table tr:nth-child(2) td:first-child div span {
+    background: black;
+    height: 25px;
+    color: red;
+    display: inline-block;
+    padding: 2px;
+    padding-top: 8px;
+    width: 25%;
+    text-shadow: 0 0 10px red;
+}
+
+nav a {
+    background: url('img/ohno/button-1.png') no-repeat;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    display: block;
+    padding-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-image: url('img/ohno/button-2.png');
+}
+
+figure {
+    text-align: center;
+}
