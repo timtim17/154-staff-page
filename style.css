@@ -95,3 +95,7 @@ div#social i.fa-discord:hover span#discord-floater {
   opacity: 1;
   visibility: visible;
 }
+
+a {
+  color: white;
+}
