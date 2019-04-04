@@ -6,7 +6,7 @@
   WRITE A 1-3 SENTENCE SHORT FILE DESCRIPTION HERE
 */
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
 
 html {
   border: #ff991a 10px solid;
@@ -98,4 +98,71 @@ div#social i.fa-discord:hover span#discord-floater {
 
 a {
   color: white;
+}
+
+ol#classes {
+  counter-reset: counter;
+  list-style: none;
+}
+
+ol#classes li {
+  background-color: #222;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  border-radius: 5px;
+  color: white;
+  counter-increment: counter;
+  display: inline-block;
+  height: 100px;
+  margin: 4px;
+  padding: 4px;
+  position: relative;
+  width: 200px;
+}
+
+ol#classes li::before {
+  color: #555;
+  content: counter(counter);
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 4px;
+  position: absolute;
+  bottom: 4px;
+}
+
+ol#classes li#class-154 {
+  background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
+  background-size: 40%;
+}
+
+ol#classes li#class-163 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/128px-Python.svg.png");
+  background-size: 32%;
+}
+
+ol#classes li#class-200 {
+  background-image: url("img/classes/ischool.svg");
+}
+
+ol#classes li#class-308 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Twemoji2_1f922.svg/128px-Twemoji2_1f922.svg.png");
+}
+
+/* change background using n-th child so colors stay in order even if classes move */
+ol#classes li:nth-child(1) {
+  background-color: #399162;
+}
+
+ol#classes li:nth-child(2) {
+  background-color: #246944;
+}
+
+ol#classes li:nth-child(3) {
+  background-color: #8C9111;
+}
+
+ol#classes li:nth-child(4) {
+  background-color: #912D11;
 }
