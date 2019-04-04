@@ -149,20 +149,3 @@ ol#classes li#class-200 {
 ol#classes li#class-308 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Twemoji2_1f922.svg/128px-Twemoji2_1f922.svg.png");
 }
-
-/* change background using n-th child so colors stay in order even if classes move */
-ol#classes li:nth-child(1) {
-  background-color: #399162;
-}
-
-ol#classes li:nth-child(2) {
-  background-color: #246944;
-}
-
-ol#classes li:nth-child(3) {
-  background-color: #8C9111;
-}
-
-ol#classes li:nth-child(4) {
-  background-color: #912D11;
-}
