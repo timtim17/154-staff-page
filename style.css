@@ -44,7 +44,7 @@ div#social i {
   text-decoration: none;
 }
 
-section:first-of-type img {
+img#profile {
   border-radius: 50%;
   float: left;
   transition: border-radius ease-in-out 50ms;
@@ -52,11 +52,11 @@ section:first-of-type img {
   width: 100px;
 }
 
-section:first-of-type p {
+p#intro {
   clear: left;
 }
 
-section:first-of-type img:hover {
+img#profile:hover {
   border-radius: 25%;
 }
 
