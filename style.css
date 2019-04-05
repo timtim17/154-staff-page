@@ -115,11 +115,11 @@ ol.blocklist li, ul.blocklist li {
   color: white;
   counter-increment: counter;
   display: inline-block;
-  height: 100px;
+  min-height: 100px;
   margin: 4px;
   padding: 4px;
   position: relative;
-  width: 200px;
+  min-width: 200px;
 }
 
 ol.blocklist li::before, ul.counter li::before {
@@ -173,4 +173,58 @@ ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
 
 ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+h2#favorites-header {
+  margin-bottom: 0;
+}
+
+#favorites li {
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  text-shadow: 0 0 5px black;
+  transition: filter 500ms linear;
+}
+
+#favorites li:hover {
+  filter: blur(0);
+}
+
+#favorites li::before {
+  color: white;
+}
+
+#favorites strong {
+  display: block;
+}
+
+li#panda {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
+}
+
+li#food {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
+}
+
+li#lwt {
+  background-image: url("http://brioux.tv/wp-content/uploads/2015/10/SE_LastWeekTonightWJO-S2-L.jpg");
+}
+
+li#sarcasm::after {
+  bottom: 4px;
+  color: #444;
+  content: "<joke funny=\"false\" />";
+  font-size: x-small;
+  font-weight: 600;
+  position: absolute;
+  right: 4px;
+}
+
+.font-x-small {
+  font-size: x-small;
+}
+
+.font-xx-small {
+  font-size: xx-small;
 }
