@@ -17,6 +17,7 @@ header, aside, main {
 }
 
 header img {
+    border-right: white 3px dotted;
     vertical-align: middle;
     width: 200px;
 }
