@@ -1,42 +1,54 @@
+/*
+  Name: Austin Jenchi
+  Date: April 2, 2019
+  Section: CSE 154 AQ 19sp
+
+  Some basic CSS styles for my "ugly website" page.
+*/
 body {
     background: olivedrab;
     color: white;
     font-family: Arial, sans-serif;
+    width: 1220px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 75%;
-}
-
-table, td {
+header, aside, main {
     border: white 2px dotted;
 }
 
-table tr td:first-child {
+header img {
+    vertical-align: middle;
     width: 200px;
 }
 
-table tr:nth-child(2) td:nth-child(2) {
+header h1 {
+    display: inline;
+}
+
+aside {
+    float: left;
+    height: 928.34px;
+    width: 200px;
+}
+
+main {
+    margin-left: 200px;
     padding: 8px;
+    width: 1000px;
 }
 
-table tr:nth-child(2) td:first-child {
-    vertical-align: top;
-}
-
-table tr:nth-child(2) td:first-child div {
+section#counter {
     text-align: center;
 }
 
-table tr:nth-child(2) td:first-child div span {
+aside section#counter span {
     background: black;
     height: 25px;
     color: red;
     display: inline-block;
     padding: 2px;
     padding-top: 8px;
-    width: 25%;
+    width: 60px;
     text-shadow: 0 0 10px red;
 }
 
