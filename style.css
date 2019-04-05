@@ -274,7 +274,7 @@ blockquote::after {
   right: -60px;
 }
 
-/* per FIRST Robotics branding, all uses of the wordmark FIRST must be in itallics */
+/* per FIRST Robotics branding, all uses of the wordmark FIRST must be in italics */
 span.first-brand {
   font-style: italic;
 }
