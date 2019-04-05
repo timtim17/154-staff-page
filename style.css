@@ -211,7 +211,7 @@ li#hobby {
 }
 
 li#sarcasm {
-  background-image: url("https://cdn.pixabay.com/photo/2015/12/09/10/38/question-mark-1084522_960_720.jpg");
+  background-image: url("img/favorites/question.jpg");
 }
 
 li#sarcasm::after {
