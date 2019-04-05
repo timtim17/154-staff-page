@@ -100,12 +100,13 @@ a {
   color: white;
 }
 
-ol#classes {
+ol.blocklist, ul.blocklist {
   counter-reset: counter;
   list-style: none;
+  padding: 0;
 }
 
-ol#classes li {
+ol.blocklist li, ul.blocklist li {
   background-color: #222;
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -121,7 +122,7 @@ ol#classes li {
   width: 200px;
 }
 
-ol#classes li::before {
+ol.blocklist li::before, ul.counter li::before {
   color: #555;
   content: counter(counter);
   font-size: 4em;
@@ -132,20 +133,44 @@ ol#classes li::before {
   bottom: 0;
 }
 
-ol#classes li#class-154 {
+li#class-154 {
   background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
   background-size: 40%;
 }
 
-ol#classes li#class-163 {
+li#class-163 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
   background-size: 32%;
 }
 
-ol#classes li#class-200 {
+li#class-200 {
   background-image: url("img/classes/ischool.svg");
 }
 
-ol#classes li#class-308 {
+li#class-308 {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Twemoji2_1f922.svg");
+}
+
+ol.oneline, ul.oneline {
+  height: 130px;
+  overflow: scroll hidden;
+  white-space: nowrap;
+}
+
+ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
+  height: 8px;
+}
+
+ul.oneline::-webkit-scrollbar-track, ol.oneline::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
