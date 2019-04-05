@@ -129,7 +129,7 @@ ol#classes li::before {
   line-height: 1;
   margin-right: 4px;
   position: absolute;
-  bottom: 4px;
+  bottom: 0;
 }
 
 ol#classes li#class-154 {
