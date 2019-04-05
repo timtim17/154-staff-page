@@ -187,20 +187,6 @@ ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:h
   z-index: 10;
 }
 
-#favorites a li:hover {
-  animation: float 1s ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1.2);
-  }
-
-  100% {
-    transform: translateY(-5px) scale(1.2);
-  }
-}
-
 #favorites li::before {
   color: white;
 }
