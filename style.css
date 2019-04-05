@@ -175,14 +175,30 @@ ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:h
   background: #555;
 }
 
-h2#favorites-header {
-  margin-bottom: 0;
-}
-
 #favorites li {
   background-position: center;
   background-size: cover;
   text-shadow: 0 0 5px black;
+  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+}
+
+#favorites li:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+#favorites a li:hover {
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(-5px) scale(1.2);
+  }
 }
 
 #favorites li::before {
@@ -205,18 +221,22 @@ li#lwt {
   background-image: url("http://brioux.tv/wp-content/uploads/2015/10/SE_LastWeekTonightWJO-S2-L.jpg");
 }
 
+li#hobby {
+  background-image: url("img/favorites/code.png");
+}
+
+li#sarcasm {
+  background-image: url("https://cdn.pixabay.com/photo/2015/12/09/10/38/question-mark-1084522_960_720.jpg");
+}
+
 li#sarcasm::after {
   bottom: 4px;
-  color: #444;
+  color: #ddd;
   content: "<joke funny=\"false\" />";
   font-size: x-small;
   font-weight: 600;
   position: absolute;
   right: 4px;
-}
-
-.font-x-small {
-  font-size: x-small;
 }
 
 .font-xx-small {
