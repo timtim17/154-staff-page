@@ -25,6 +25,17 @@ h1, h2, h3 {
   color: white;
 }
 
+footer {
+  background-color: #ff991a;
+  padding: 8px;
+  display: block;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+  width: fit-content;
+  margin: 8px auto -8px auto;
+}
+
 section#intro-group {
   display: inline-block;
   margin-left: 8px;
@@ -131,16 +142,22 @@ ol.blocklist li::before, ul.counter li::before {
 }
 
 li#class-154 {
+  /* Image citation: illustration created for the CSE 154 website, taken directly from the course
+  website https://courses.cs.washington.edu/courses/cse154/19sp/ */
   background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
   background-size: 40%;
 }
 
 li#class-163 {
+  /* Image citation: Python logo is trademark the Python Software Foundation.
+  this rendition is created by the Tango! project team, who have released it
+  under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
   background-size: 32%;
 }
 
 li#class-200 {
+  /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
   background-image: url("img/classes/ischool.svg");
 }
 
@@ -201,22 +218,36 @@ ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:h
 }
 
 li#panda {
+  /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Red_panda */
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
 }
 
 li#food {
+  /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Dim_sum */
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
 }
 
 li#lwt {
-  background-image: url("http://brioux.tv/wp-content/uploads/2015/10/SE_LastWeekTonightWJO-S2-L.jpg");
+  /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
+  original source, though it is likely originally created by HBO or John oliver's production
+  company. This image was found here:
+  https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
+  but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
+  background-image: url("img/favorites/lwt.jpg");
 }
 
 li#hobby {
+  /* Image citation: screenshot taken of my code by me.
+  IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
   background-image: url("img/favorites/code.png");
 }
 
 li#sarcasm {
+  /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
+  Per license, no attribution required, though the image was created by "TheDigitalArtist"
+  https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
   background-image: url("img/favorites/question.jpg");
 }
 
