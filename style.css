@@ -316,3 +316,15 @@ blockquote::after {
 span.first-brand {
   font-style: italic;
 }
+
+iframe.youtube-video {
+  margin: 0 auto;
+  width: 600px;
+  height: 338px;
+  border: 0;
+  display: block;
+}
+
+p.video-caption {
+  text-align: center;
+}
