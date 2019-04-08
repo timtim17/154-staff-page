@@ -32,6 +32,25 @@ aside {
     width: 200px;
 }
 
+nav a {
+    background: url('img/ohno/button-1.png') no-repeat;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    display: block;
+    padding-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-image: url('img/ohno/button-2.png');
+}
+
+figure {
+    text-align: center;
+}
+
 main {
     margin-left: 200px;
     padding: 8px;
@@ -51,23 +70,4 @@ aside section#counter span {
     padding-top: 8px;
     width: 60px;
     text-shadow: 0 0 10px red;
-}
-
-nav a {
-    background: url('img/ohno/button-1.png') no-repeat;
-    text-align: center;
-    width: 200px;
-    height: 50px;
-    display: block;
-    padding-top: 15px;
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-image: url('img/ohno/button-2.png');
-}
-
-figure {
-    text-align: center;
 }

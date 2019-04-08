@@ -25,6 +25,38 @@ h1, h2, h3 {
   color: white;
 }
 
+a {
+  color: white;
+}
+
+blockquote {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3em;
+  margin: 0;
+  margin-left: 50px;
+  margin-bottom: -40px;
+  position: relative;
+  width: fit-content;
+}
+
+blockquote::before, blockquote::after {
+  color: #ff991a;
+  font-size: 3.5em;
+  position: absolute;
+}
+
+blockquote::before {
+  content: "“";
+  left: -75px;
+  top: -100px;
+}
+
+blockquote::after {
+  bottom: -65px;
+  content: "”";
+  right: -60px;
+}
+
 footer {
   background-color: #ff991a;
   padding: 8px;
@@ -60,12 +92,12 @@ img#profile {
   width: 100px;
 }
 
-p#intro {
-  clear: left;
-}
-
 img#profile:hover {
   border-radius: 25%;
+}
+
+p#intro {
+  clear: left;
 }
 
 i.fa-discord {
@@ -102,10 +134,6 @@ div#social i.fa-discord span#discord-floater {
 div#social i.fa-discord:hover span#discord-floater {
   opacity: 1;
   visibility: visible;
-}
-
-a {
-  color: white;
 }
 
 ol.blocklist, ul.blocklist {
@@ -282,34 +310,6 @@ section#pictures section img {
 
 section#pictures section p {
   margin-top: 2px;
-}
-
-blockquote {
-  font-family: "Permanent Marker", cursive;
-  font-size: 3em;
-  margin: 0;
-  margin-left: 50px;
-  margin-bottom: -40px;
-  position: relative;
-  width: fit-content;
-}
-
-blockquote::before, blockquote::after {
-  color: #ff991a;
-  font-size: 3.5em;
-  position: absolute;
-}
-
-blockquote::before {
-  content: "“";
-  left: -75px;
-  top: -100px;
-}
-
-blockquote::after {
-  bottom: -65px;
-  content: "”";
-  right: -60px;
 }
 
 /* per FIRST Robotics branding, all uses of the wordmark FIRST must be in italics */
