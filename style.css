@@ -1,0 +1,330 @@
+/*
+  Name: Austin Jenchi
+  Date: April 2, 2019
+  Section: CSE 154 AQ 19sp
+
+  Some basic CSS styles for my about me pages.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Permanent+Marker');
+
+body {
+  background-color: #333;
+  border: #ff991a 10px solid;
+  border-left: 0;
+  border-right: 0;
+  color: #ccc;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 8px auto 0 auto;
+  max-width: 80%;
+  padding: 8px;
+  width: fit-content;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+blockquote {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3em;
+  margin: 0;
+  margin-left: 50px;
+  margin-bottom: -40px;
+  position: relative;
+  width: fit-content;
+}
+
+blockquote::before, blockquote::after {
+  color: #ff991a;
+  font-size: 3.5em;
+  position: absolute;
+}
+
+blockquote::before {
+  content: "“";
+  left: -75px;
+  top: -100px;
+}
+
+blockquote::after {
+  bottom: -65px;
+  content: "”";
+  right: -60px;
+}
+
+footer {
+  background-color: #ff991a;
+  padding: 8px;
+  display: block;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+  width: fit-content;
+  margin: 8px auto -8px auto;
+}
+
+section#intro-group {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+section#intro-group h2 {
+  margin: 0.23em 0 4px 0;
+  font-size: 2.2em;
+}
+
+div#social i {
+  font-size: 2em;
+  margin-right: 4px;
+  text-decoration: none;
+}
+
+img#profile {
+  border-radius: 50%;
+  float: left;
+  transition: border-radius ease-in-out 50ms;
+  vertical-align: middle;
+  width: 100px;
+}
+
+img#profile:hover {
+  border-radius: 25%;
+}
+
+p#intro {
+  clear: left;
+}
+
+i.fa-discord {
+  color: #7289DA;
+  position: relative;
+}
+
+i.fa-twitter {
+  color: #1da1f3;
+}
+
+i.fa-github {
+  color: white;
+}
+
+i.fa-linkedin {
+  color: #0077b5;
+}
+
+div#social i.fa-discord span#discord-floater {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.5em;
+  left: 2.2em;
+  opacity: 0;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  transition: opacity 500ms linear;
+  visibility: hidden;
+}
+
+div#social i.fa-discord:hover span#discord-floater {
+  opacity: 1;
+  visibility: visible;
+}
+
+ol.blocklist, ul.blocklist {
+  counter-reset: counter;
+  list-style: none;
+  padding: 0;
+}
+
+ol.blocklist li, ul.blocklist li {
+  background-color: #222;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  border-radius: 5px;
+  color: white;
+  counter-increment: counter;
+  display: inline-block;
+  min-height: 100px;
+  margin: 4px;
+  padding: 4px;
+  position: relative;
+  min-width: 200px;
+}
+
+ol.blocklist li::before, ul.counter li::before {
+  color: #555;
+  content: counter(counter);
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+li#class-154 {
+  /* Image citation: illustration created for the CSE 154 website, taken directly from the course
+  website https://courses.cs.washington.edu/courses/cse154/19sp/ */
+  background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
+  background-size: 40%;
+}
+
+li#class-163 {
+  /* Image citation: Python logo is trademark the Python Software Foundation.
+  this rendition is created by the Tango! project team, who have released it
+  under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
+  background-size: 32%;
+}
+
+li#class-200 {
+  /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
+  background-image: url("img/classes/ischool.svg");
+}
+
+li#class-308 {
+  /* Image citation: Found on Wikipedia and WikiMedia by Twitter under CC BY 4.0
+  https://commons.wikimedia.org/wiki/File:Twemoji2_1f922.svg */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Twemoji2_1f922.svg");
+}
+
+ol.oneline, ul.oneline {
+  height: 130px;
+  overflow: scroll hidden;
+  white-space: nowrap;
+}
+
+ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
+  height: 8px;
+}
+
+ul.oneline::-webkit-scrollbar-track, ol.oneline::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#favorites li {
+  background-position: center;
+  background-size: cover;
+  text-shadow: 0 0 5px black;
+  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+}
+
+#favorites li a {
+  text-decoration: none;
+}
+
+#favorite li a:hover {
+  text-decoration: underline;
+}
+
+#favorites li:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+#favorites li::before {
+  color: white;
+}
+
+#favorites strong {
+  display: block;
+}
+
+li#panda {
+  /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Red_panda */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
+}
+
+li#food {
+  /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Dim_sum */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
+}
+
+li#lwt {
+  /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
+  original source, though it is likely originally created by HBO or John oliver's production
+  company. This image was found here:
+  https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
+  but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
+  background-image: url("img/favorites/lwt.jpg");
+}
+
+li#hobby {
+  /* Image citation: screenshot taken of my code by me.
+  IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
+  background-image: url("img/favorites/code.png");
+}
+
+li#sarcasm {
+  /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
+  Per license, no attribution required, though the image was created by "TheDigitalArtist"
+  https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
+  background-image: url("img/favorites/question.jpg");
+}
+
+li#sarcasm::after {
+  bottom: 4px;
+  color: #ddd;
+  content: "<joke funny=\"false\" />";
+  font-size: x-small;
+  font-weight: 600;
+  position: absolute;
+  right: 4px;
+}
+
+.font-xx-small {
+  font-size: xx-small;
+}
+
+section#pictures {
+  display: flex;
+}
+
+section#pictures section {
+  width: 50%;
+}
+
+section#pictures section img {
+  border-radius: 25px;
+  width: 95%;
+}
+
+section#pictures section p {
+  margin-top: 2px;
+}
+
+/* per FIRST Robotics branding, all uses of the wordmark FIRST must be in italics */
+span.first-brand {
+  font-style: italic;
+}
+
+iframe.youtube-video {
+  margin: 0 auto;
+  width: 600px;
+  height: 338px;
+  border: 0;
+  display: block;
+}
+
+p.video-caption {
+  text-align: center;
+}

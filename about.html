@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<!--
+  Name: Austin Jenchi
+  Date: April 2, 2019
+  Section: CSE 154 AQ 19sp
+
+  My main "About Me" page. This would be the home page,
+  the `index.html` of a typical site.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title> <!-- a very uncreative title -->
+    <!-- fontawesome imports per https://fontawesome.com/start -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <section>
+      <h1>Who am I?</h1>
+      <!-- picture taken of me by a volunteer FIRST Robotics photographer
+      https://www.flickr.com/photos/firstwamediacrew/38811480740/in/album-72157691052770842/ -->
+      <img src="img/profile.jpg" alt="My profile picture" id="profile">
+      <section id="intro-group">
+          <h2>Austin Jenchi</h2>
+          <div id="social">
+            <!-- social media icons are trademark to their owners,
+            icons created by the creators of FontAwesome -->
+            <i class="fab fa-discord">
+              <!-- instead of linking, make my username appear on hover -->
+              <span id="discord-floater">austinj9#5465</span>
+            </i>
+            <a href="https://twitter.com/austin99099"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/timtim17"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/austinjenchi"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </section>
+      <p id="intro">
+        My name is Austin, and I'm a first year student at UW-Seattle intending to major in Computer
+        Science! I have some experience with web programming, from <a href="bad.html">my first ever
+        experience with "web design" as a kid years ago</a> to my most recent project, a new website
+        for <a href="https://jekyll.team1294.org">my high school robotics team</a>. However, I'm still
+        excited to learn more about the full web stack, from more in-depth knowledge on the client to
+        gaining some experience with server-side programming. I'm also involved in
+        <a href="frc.html"><span class="first-brand">FIRST</span> Robotics</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Classes I'm currently taking</h2>
+      <ol class="blocklist" id="classes">
+        <li id="class-154">CSE 154</li>
+        <li id="class-163">CSE 163</li>
+        <li id="class-200">INFO 200</li>
+        <li id="class-308">MATH 308</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Classes I have taken</h2>
+      <ul class="blocklist counter oneline">
+        <li>MATH 120</li>
+        <li>MATH 124</li>
+        <li>CSE 143</li>
+        <li>ENGL 131</li>
+        <li>C LIT 240</li>
+        <li>PHYS 121</li>
+        <li>MATH 125</li>
+        <li>ENGL 242</li>
+        <li>GEN ST 199</li>
+        <li>PHYS 122</li>
+        <li>MATH 126</li>
+        <li>DRAMA 251</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="favorites-header">Five of My Favorite Things</h2>
+      <ul class="blocklist counter" id="favorites">
+        <li id="panda"><a href="https://en.wikipedia.org/wiki/Red_panda">
+          <strong>Favorite animal:</strong>
+          Red Panda
+        </a></li>
+        <li id="food"><a href="https://en.wikipedia.org/wiki/Dim_sum">
+          <strong>Favorite food:</strong>
+          Dim Sum
+        </a></li>
+        <li id="lwt"><a href="https://www.hbo.com/last-week-tonight-with-john-oliver">
+          <strong>Favorite TV show:</strong>
+          Last Week Tonight
+        </a></li>
+        <li id="hobby">
+          <strong>Favorite hobby:</strong>
+          Programming <span class="font-xx-small">(only slightly obvious)</span>
+        </li>
+        <li id="sarcasm">
+          <strong>Favorite ???:</strong>
+          My favorite question mark is ❓
+        </li>
+      </ul>
+
+      <section id="pictures">
+        <section>
+          <h3>A picture that represents when I'm happy</h3>
+          <img src="img/happy_majortom.jpg" alt="a happy stuffed goat named Major Tom">
+          <p>Taken by me</p>
+        </section>
+
+        <section>
+          <h3>A picture that represents when I'm sad</h3>
+          <img src="https://farm3.staticflickr.com/2610/4020584983_0ec7ef97d7_z.jpg?zz=1" alt="a report card with an 'F' written over it" />
+          <p>Found on <a href="https://www.flickr.com/photos/amboo213/4020584983">Flickr</a> by <a href="https://www.flickr.com/photos/amboo213/">amboo213</a>
+            under <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></p>
+        </section>
+      </section>
+
+      <h3>One of my favorite quotes</h3>
+      <article>
+        <blockquote>
+          <p>
+            Programmers break things.
+          </p>
+        </blockquote>
+        <cite>Tim, Student at Henry M. Jackson High School, Member of <span class="first-brand">FIRST</span> Robotics Competition team 2910</cite>
+        <a href="img/quote.png" class="font-xx-small">(source)</a>
+      </article>
+    </section>
+
+    <footer>
+      Portions of this page © 2019 Austin Jenchi, other attributions cited in document or page
+      source. <br> Many of the images used are under
+      <a href="http://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a> or
+      <a href="http://creativecommons.org/licenses/by-sa/3.0">3.0</a>. <br> Per those licenses,
+      creator attributions are either on this page, in page source, or in CSS. <br> In addition,
+      per those licenses this work is also offered under
+      <a href="http://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.<br>
+      <!-- this markup taken directly from CC with some editing to fit class style guides
+           https://creativecommons.org/choose/ -->
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <!-- image created by Creative Commons for the use of licensing works -->
+        <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png">
+      </a>
+    </footer>
+  </body>
+</html>
