@@ -124,6 +124,10 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
     bottom: 0;
 }
 
+.font-xx-small {
+    font-size: xx-small;
+}
+
 .hidden {
     display: none;
 }
@@ -239,6 +243,17 @@ li#hobby {
     Per license, no attribution required, though the image was created by "TheDigitalArtist"
     https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
     background-image: url("img/favorites/question.jpg");
+}
+
+
+li#sarcasm::after {
+    bottom: 4px;
+    color: #ddd;
+    content: "<joke funny=\"false\" />";
+    font-size: x-small;
+    font-weight: 600;
+    position: absolute;
+    right: 4px;
 }
 
 #classes li[id] {
