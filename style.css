@@ -53,13 +53,8 @@ footer {
   margin: 8px auto -8px auto;
 }
 
-i.fa-discord {
-  color: #7289DA;
-  position: relative;
-}
-
-i.fa-twitter {
-  color: #1da1f3;
+i.fa-envelope {
+  color: #FFDC00;
 }
 
 i.fa-linkedin {
@@ -180,9 +175,8 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 }
 
 #class-308 {
-  /* Image citation: Found on Wikipedia and WikiMedia by Twitter under CC BY 4.0
-  https://commons.wikimedia.org/wiki/File:Twemoji2_1f922.svg */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Twemoji2_1f922.svg");
+  /* Image citation: Found on Google Images hosted by Pngtree http://bit.ly/2MRksVr */
+  background-image: url("img/classes/matrix.png");
 }
 
 ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
@@ -201,21 +195,4 @@ ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
 
 ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* per FIRST Robotics branding, all uses of the wordmark FIRST must be in italics */
-span.first-brand {
-  font-style: italic;
-}
-
-iframe.youtube-video {
-  margin: 0 auto;
-  width: 600px;
-  height: 338px;
-  border: 0;
-  display: block;
-}
-
-p.video-caption {
-  text-align: center;
 }
