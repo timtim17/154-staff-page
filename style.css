@@ -29,22 +29,7 @@ h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li,
     color: white;
 }
 
-blockquote {
-    font-family: "Permanent Marker", cursive;
-    font-size: 3em;
-    margin: 0;
-    margin-left: 50px;
-    margin-bottom: -40px;
-    position: relative;
-}
-
-blockquote::before, blockquote::after {
-    color: #ff991a;
-    font-size: 3.5em;
-    position: absolute;
-}
-
-footer, #slideshow ol li {
+footer, #slideshow ol li, #projects section a {
     background-color: #ff991a;
 }
 
@@ -290,10 +275,13 @@ li#sarcasm::after {
     background-image: url("img/classes/matrix.png");
 }
 
-#slideshow {
+#slideshow, #projects, #projects section {
     display: flex;
-    height: 43.5vh;
     justify-content: center;
+}
+
+#slideshow {
+    height: 43.5vh;
 }
 
 #slideshow ol {
@@ -339,6 +327,36 @@ li#sarcasm::after {
 
 #slideshow button:focus {
     outline: none;
+}
+
+#projects {
+    flex-wrap: wrap;
+}
+
+#projects section {
+    align-items: center;
+    background-color: #222;
+    border-radius: 8px;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 150px;
+    margin: 4px;
+    min-width: 400px;
+}
+
+#projects section h3, #projects section h4 {
+    margin: 4px;
+}
+
+#projects section a {
+    border-radius: 4px;
+    padding: 4px;
+    text-decoration: none;
+    transition: background-color 250ms ease-in-out;
+}
+
+#projects section a:hover {
+    background-color: #b96f13;
 }
 
 ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
