@@ -168,11 +168,14 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
     clear: left;
 }
 
+#favorites li, #projects section {
+    transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+}
+
 #favorites li {
     background-position: center;
     background-size: cover;
     text-shadow: 0 0 5px black;
-    transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
 }
 
 #favorites li a {
@@ -183,7 +186,7 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
     text-decoration: underline;
 }
 
-#favorites li:hover {
+#favorites li:hover, #projects section:hover {
     transform: scale(1.2);
     z-index: 10;
 }
@@ -336,6 +339,7 @@ li#sarcasm::after {
 #projects section {
     align-items: center;
     background-color: #222;
+    background-size: cover;
     border-radius: 8px;
     flex-direction: column;
     flex-grow: 1;
@@ -357,6 +361,34 @@ li#sarcasm::after {
 
 #projects section a:hover {
     background-color: #b96f13;
+}
+
+#projects section:nth-child(1) {
+    /* fake overlay with gradient (image) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/cps/wyvern.png");
+    border: solid 2px #222;
+    height: 146px;
+}
+
+#projects section:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/cps/super-launch-star.png");
+}
+
+#projects section:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/cps/astro.png");
+}
+
+#projects section:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/cps/cookie.png");
+}
+
+#projects section:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("img/cps/dulce-de-leche.png");
 }
 
 ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
