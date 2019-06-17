@@ -3,258 +3,314 @@
   Date: April 2, 2019
   Section: CSE 154 AQ 19sp
 
-  Some basic CSS styles for my about me pages.
+  Some basic CSS styles for my about me page.
 */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
 
 body {
-  background-color: #333;
-  border: #ff991a 10px solid;
-  border-left: 0;
-  border-right: 0;
-  color: #ccc;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 8px auto 0 auto;
-  max-width: 80%;
-  padding: 8px;
+    background-color: #333;
+    border: #ff991a 10px solid;
+    border-left: 0;
+    border-right: 0;
+    color: #ccc;
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 8px;
 }
 
 body, footer {
-  width: fit-content;
+    width: fit-content;
 }
 
-h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li, #social i.fa-discord #discord-floater {
-  color: white;
+h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li,
+    #social i.fa-discord #discord-floater, .slideshow ol li, .slideshow button:active {
+    color: white;
 }
 
 blockquote {
-  font-family: "Permanent Marker", cursive;
-  font-size: 3em;
-  margin: 0;
-  margin-left: 50px;
-  margin-bottom: -40px;
-  position: relative;
+    font-family: "Permanent Marker", cursive;
+    font-size: 3em;
+    margin: 0;
+    margin-left: 50px;
+    margin-bottom: -40px;
+    position: relative;
 }
 
 blockquote::before, blockquote::after {
-  color: #ff991a;
-  font-size: 3.5em;
-  position: absolute;
+    color: #ff991a;
+    font-size: 3.5em;
+    position: absolute;
+}
+
+footer, .slideshow ol li {
+    background-color: #ff991a;
 }
 
 footer {
-  background-color: #ff991a;
-  padding: 8px;
-  display: block;
-  margin-top: 8px;
-  text-align: center;
-  width: fit-content;
-  margin: 8px auto -8px auto;
+    padding: 8px;
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    width: fit-content;
+    margin: 8px auto -8px auto;
+}
+
+footer p {
+    margin: 4px;
 }
 
 i.fa-envelope {
-  color: #FFDC00;
+    color: #FFDC00;
 }
 
 i.fa-linkedin {
-  color: #0077b5;
+    color: #0077b5;
+}
+
+.oneline, .flexline, .slideshow ol {
+    list-style: none;
 }
 
 .oneline, .flexline {
-  counter-reset: counter;
-  list-style: none;
-  padding: 0;
+    counter-reset: counter;
+    padding: 0;
 }
 
 .flexline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .flexline li {
-  text-align: center;
-  padding: 8px 16px;
+    text-align: center;
+    padding: 8px 16px;
 }
 
 .oneline {
-  height: 130px;
-  overflow: auto hidden;
-  white-space: nowrap;
+    height: 130px;
+    overflow: auto hidden;
+    white-space: nowrap;
 }
 
 .oneline li {
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: 25%;
-  min-height: 100px;
-  min-width: 200px;
-  padding: 4px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    min-height: 100px;
+    min-width: 200px;
+    padding: 4px;
 }
 
 .oneline li, .flexline li {
-  background-color: #222;
-  border-radius: 5px;
-  counter-increment: counter;
-  display: inline-block;
-  margin: 4px;
-  position: relative;
+    background-color: #222;
+    border-radius: 5px;
+    counter-increment: counter;
+    display: inline-block;
+    margin: 4px;
+    position: relative;
 }
 
 ol.oneline li::before, ol.flexline li::before, .counter li::before {
-  color: #555;
-  content: counter(counter);
-  font-size: 4em;
-  font-weight: 900;
-  line-height: 1;
-  margin-right: 4px;
-  position: absolute;
-  bottom: 0;
+    color: #555;
+    content: counter(counter);
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1;
+    margin-right: 4px;
+    position: absolute;
+    bottom: 0;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow ol {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+.slideshow ol li {
+    height: 40vh;
+    padding: 16px;
+}
+
+.slideshow ol li h3 {
+    font-size: 2em;
+}
+
+.slideshow ol li p {
+    font-size: 1.5em;
+}
+
+.slideshow button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 4em;
+    transition: transform 250ms ease-in-out, color 100ms ease-in-out;
+}
+
+.slideshow button#btn-left:hover {
+    transform: translateX(-20px);
+}
+
+.slideshow button#btn-right:hover {
+    transform: translateX(20px);
+}
+
+.hidden {
+    display: none;
 }
 
 #intro-group {
-  display: inline-block;
-  margin-left: 8px;
+    display: inline-block;
+    margin-left: 8px;
 }
 
 #intro-group h2 {
-  margin: 0.23em 0 4px 0;
-  font-size: 2.2em;
+    margin: 0.23em 0 4px 0;
+    font-size: 2.2em;
 }
 
 #social i {
-  font-size: 2em;
-  margin-right: 4px;
-  text-decoration: none;
+    font-size: 2em;
+    margin-right: 4px;
+    text-decoration: none;
 }
 
 #profile {
-  border-radius: 50%;
-  float: left;
-  transition: border-radius ease-in-out 50ms;
-  vertical-align: middle;
-  width: 100px;
+    border-radius: 50%;
+    float: left;
+    transition: border-radius ease-in-out 50ms;
+    vertical-align: middle;
+    width: 100px;
 }
 
 #profile:hover {
-  border-radius: 25%;
+    border-radius: 25%;
 }
 
 #intro {
-  clear: left;
+    clear: left;
 }
 
 #favorites li {
-  background-position: center;
-  background-size: cover;
-  text-shadow: 0 0 5px black;
-  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0 0 5px black;
+    transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
 }
 
 #favorites li a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #favorite li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #favorites li:hover {
-  transform: scale(1.2);
-  z-index: 10;
+    transform: scale(1.2);
+    z-index: 10;
 }
 
 #favorites li::before {
-  color: white;
+    color: white;
 }
 
 #favorites strong {
-  display: block;
+    display: block;
 }
 
 #panda {
-  /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
-  https://en.wikipedia.org/wiki/Red_panda */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
+    /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
+    https://en.wikipedia.org/wiki/Red_panda */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
 }
 
 #food {
-  /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
-  https://en.wikipedia.org/wiki/Dim_sum */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
+    /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
+    https://en.wikipedia.org/wiki/Dim_sum */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
 }
 
 #lwt {
-  /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
-  original source, though it is likely originally created by HBO or John oliver's production
-  company. This image was found here:
-  https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
-  but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
-  background-image: url("img/favorites/lwt.jpg");
+    /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
+    original source, though it is likely originally created by HBO or John oliver's production
+    company. This image was found here:
+    https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
+    but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
+    background-image: url("img/favorites/lwt.jpg");
 }
 
 li#hobby {
-  /* Image citation: screenshot taken of my code by me.
-  IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
-  background-image: url("img/favorites/code.png");
+    /* Image citation: screenshot taken of my code by me.
+    IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
+    background-image: url("img/favorites/code.png");
 }
 
 #sarcasm {
-  /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
-  Per license, no attribution required, though the image was created by "TheDigitalArtist"
-  https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
-  background-image: url("img/favorites/question.jpg");
+    /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
+    Per license, no attribution required, though the image was created by "TheDigitalArtist"
+    https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
+    background-image: url("img/favorites/question.jpg");
 }
 
 #classes li[id] {
-  /* use id to signify that these li's have images based on id, so other flexlist's with li's with
-  ids don't have extra padding */
-  background-size: 32px;
-  background-repeat: no-repeat;
-  background-position: 4px center;
-  padding-left: 40px;
+    /* use id to signify that these li's have images based on id, so other flexlist's with li's with
+    ids don't have extra padding */
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    padding-left: 40px;
 }
 
 #class-154 {
-  /* Image citation: illustration created for the CSE 154 website, taken directly from the course
-  website https://courses.cs.washington.edu/courses/cse154/19sp/ */
-  background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
-  background-size: 40%;
+    /* Image citation: illustration created for the CSE 154 website, taken directly from the course
+    website https://courses.cs.washington.edu/courses/cse154/19sp/ */
+    background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
+    background-size: 40%;
 }
 
 #class-163 {
-  /* Image citation: Python logo is trademark the Python Software Foundation.
-  this rendition is created by the Tango! project team, who have released it
-  under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
-  background-size: 32%;
+    /* Image citation: Python logo is trademark the Python Software Foundation.
+    this rendition is created by the Tango! project team, who have released it
+    under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
+    background-size: 32%;
 }
 
 #class-200 {
-  /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
-  background-image: url("img/classes/ischool.svg");
+    /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
+    background-image: url("img/classes/ischool.svg");
 }
 
 #class-308 {
-  /* Image citation: Found on Google Images hosted by Pngtree http://bit.ly/2MRksVr */
-  background-image: url("img/classes/matrix.png");
+    /* Image citation: Found on Google Images hosted by Pngtree http://bit.ly/2MRksVr */
+    background-image: url("img/classes/matrix.png");
 }
 
 ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
-  height: 8px;
+    height: 8px;
 }
 
 ul.oneline::-webkit-scrollbar-track, ol.oneline::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
+    background: #f1f1f1;
+    border-radius: 5px;
 }
 
 ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+    background: #888;
+    border-radius: 5px;
 }
 
 ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
