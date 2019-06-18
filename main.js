@@ -3,8 +3,7 @@
  * CSE 154 19su
  * 06/17/2019
  *
- * Basic JS to handle my about me page. Handles page events for the slideshow, as well as page load
- * animations.
+ * Basic JS to handle my about me page. Handles page events for the slideshow.
  */
 (function() {
     "use strict";
@@ -17,8 +16,7 @@
     window.addEventListener("load", init);
 
     /**
-     * Handles page load by initializing button event listeners and starting animations with a
-     * class.
+     * Handles page load by initializing button event listeners.
      */
     function init() {
         id("btn-left").addEventListener("click", () => changeSlide(-1));
