@@ -25,7 +25,7 @@ body, footer {
 }
 
 h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li,
-    #slideshow ol li, #slideshow button:active {
+    #slideshow ol li, #slideshow button:active, #favorites li::before {
     color: white;
 }
 
@@ -188,10 +188,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 #favorites li:hover, #projects section:hover {
     transform: scale(1.2);
     z-index: 10;
-}
-
-#favorites li::before {
-    color: white;
 }
 
 #favorites strong {
