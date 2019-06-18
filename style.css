@@ -272,21 +272,19 @@ li#sarcasm::after {
     justify-content: center;
 }
 
-#slideshow {
-    height: 43.5vh;
-}
-
 #slideshow ol {
+    height: 28vh;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 0;
     position: relative;
     width: 90%;
 }
 
 #slideshow ol li {
-    height: 40vh;
+    height: 90%;
     left: 0;
+    overflow: hidden auto;
     padding: 16px;
     position: absolute;
     top: 0;
