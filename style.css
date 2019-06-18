@@ -75,9 +75,7 @@ i.fa-linkedin {
 }
 
 .oneline {
-    height: 130px;
-    overflow: auto hidden;
-    white-space: nowrap;
+    overflow: hidden;
 }
 
 .oneline li {
@@ -98,6 +96,7 @@ i.fa-linkedin {
 }
 
 ol.oneline li::before, ol.flexline li::before, .counter li::before {
+    bottom: 0;
     color: #555;
     content: counter(counter);
     font-size: 4em;
@@ -105,7 +104,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
     line-height: 1;
     margin-right: 4px;
     position: absolute;
-    bottom: 0;
 }
 
 .font-xx-small {
@@ -379,22 +377,4 @@ li#sarcasm::after {
 #projects section:nth-child(5) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("img/cps/dulce-de-leche.png");
-}
-
-ul.oneline::-webkit-scrollbar, ol.oneline::-webkit-scrollbar {
-    height: 8px;
-}
-
-ul.oneline::-webkit-scrollbar-track, ol.oneline::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 5px;
-}
-
-ul.oneline::-webkit-scrollbar-thumb, ol.oneline::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
-
-ul.oneline::-webkit-scrollbar-thumb:hover, ol.oneline::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
