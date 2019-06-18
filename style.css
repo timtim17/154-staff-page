@@ -42,6 +42,10 @@ footer {
     width: fit-content;
 }
 
+footer p, #projects section, #projects section h3, #projects section h4, .oneline li, .flexline li {
+    margin: 4px;
+}
+
 i.fa-envelope {
     color: #FFDC00;
 }
@@ -340,10 +344,6 @@ li#sarcasm::after {
     flex-grow: 1;
     height: 150px;
     min-width: 400px;
-}
-
-footer p, #projects section, #projects section h3, #projects section h4, .oneline li, .flexline li {
-    margin: 4px;
 }
 
 #projects section a {
