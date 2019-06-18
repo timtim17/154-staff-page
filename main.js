@@ -84,14 +84,6 @@
     const id = id => document.getElementById(id);
 
     /**
-     * Returns the first element in the DOM tree that matches the given selector.
-     *
-     * @param {string} selector - The selector to search with
-     * @returns {HTMLElement} The first element in the DOM that matches that selector
-     */
-    const qs = selector => document.querySelector(selector);
-
-    /**
      * Returns all the elements in the DOM that match the given selector.
      *
      * @param {string} selector - The selector to search with
