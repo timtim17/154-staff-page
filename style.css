@@ -74,10 +74,6 @@ i.fa-linkedin {
     padding: 8px 16px;
 }
 
-.oneline {
-    overflow: hidden;
-}
-
 .oneline li {
     background-position: right bottom;
     background-repeat: no-repeat;
