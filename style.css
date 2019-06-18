@@ -25,7 +25,7 @@ body, footer {
 }
 
 h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li,
-    #social i.fa-discord #discord-floater, #slideshow ol li, #slideshow button:active {
+    #slideshow ol li, #slideshow button:active {
     color: white;
 }
 
