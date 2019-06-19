@@ -100,23 +100,21 @@
                                         // since keys are added to the end
             }
             if (twoArraysEqual(eggKeysTyped, EGG_KEY_COMBO)) {
-                startEasterEgg();
+                setInterval(doEasterEgg, 1000);   // should only happen once
                 eggFound = true;
             }
-            console.log(eggKeysTyped);
         }
     }
 
     /**
-     * Starts the easter egg color-changing shenanigans. This should only be run once.
+     * Does the easter egg color-changing shenanigans by advancing the color by 1 (looping around
+     * if needed), and changing the css variable for the color.
      */
-    function startEasterEgg() {
-        setInterval(() => {
-            if (++curColor >= EGG_COLORS.length) {
-                curColor = 0;
-            }
-            document.documentElement.style.setProperty('--theme-color', EGG_COLORS[curColor]);
-        }, 1000);
+    function doEasterEgg() {
+        if (++curColor >= EGG_COLORS.length) {
+            curColor = 0;
+        }
+        document.documentElement.style.setProperty('--theme-color', EGG_COLORS[curColor]);
     }
 
     /**
