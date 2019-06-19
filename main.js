@@ -20,8 +20,10 @@
     const KEY_ENTER = "ENTER";
     const EGG_KEY_COMBO = [KEY_ARROW_UP, KEY_ARROW_UP, KEY_ARROW_DOWN, KEY_ARROW_DOWN,
         KEY_ARROW_LEFT, KEY_ARROW_RIGHT, KEY_ARROW_LEFT, KEY_ARROW_RIGHT, "B", "A", KEY_ENTER];
+    const EGG_COLORS = ["red", "#ff991a", "yellow", "green", "blue", "purple"];
     const eggKeysTyped = [];
     let eggFound = false;
+    let curColor = 1;
 
     window.addEventListener("load", init);
 
@@ -98,10 +100,23 @@
                                         // since keys are added to the end
             }
             if (twoArraysEqual(eggKeysTyped, EGG_KEY_COMBO)) {
-                console.log("easter egg!");
+                startEasterEgg();
                 eggFound = true;
             }
+            console.log(eggKeysTyped);
         }
+    }
+
+    /**
+     * Starts the easter egg color-changing shenanigans. This should only be run once.
+     */
+    function startEasterEgg() {
+        setInterval(() => {
+            if (++curColor >= EGG_COLORS.length) {
+                curColor = 0;
+            }
+            document.documentElement.style.setProperty('--theme-color', EGG_COLORS[curColor]);
+        }, 1000);
     }
 
     /**
