@@ -239,7 +239,7 @@ li#sarcasm::after {
     right: 4px;
 }
 
-#classes li[id] {
+.classes li[id] {
     /* use id to signify that these li's have images based on id, so other flexlist's with li's with
     ids don't have extra padding */
     background-size: 32px;
@@ -252,7 +252,7 @@ li#sarcasm::after {
     /* Image citation: illustration created for the CSE 154 website, taken directly from the course
     website https://courses.cs.washington.edu/courses/cse154/19sp/ */
     background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
-    background-size: 40%;
+    background-size: 28%;
 }
 
 #class-163 {
