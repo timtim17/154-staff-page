@@ -9,372 +9,372 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
 
 :root {
-    --theme-color: #ff991a;
+  --theme-color: #ff991a;
 }
 
 body {
-    background-color: #333;
-    border: var(--theme-color) 10px solid;
-    border-left: 0;
-    border-right: 0;
-    color: #ccc;
-    font-family: "Source Sans Pro", sans-serif;
-    margin: 0 auto;
-    max-width: 80%;
-    padding: 8px;
-    transition: border-color 1s ease-in-out;
+  background-color: #333;
+  border: var(--theme-color) 10px solid;
+  border-left: 0;
+  border-right: 0;
+  color: #ccc;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 8px;
+  transition: border-color 1s ease-in-out;
 }
 
 body, footer {
-    width: fit-content;
+  width: fit-content;
 }
 
-h1, h2, h3, a, footer, i.fa-github, .oneline li, .flexline li,
-    #slideshow ol li, #slideshow button:active, #favorites li::before {
-    color: white;
+h1, h2, h3, a, footer, .fa-github, .oneline li, .flexline li,
+  #slideshow ol li, #slideshow button:active, #favorites li::before {
+  color: white;
 }
 
 footer, #slideshow ol li, #projects section a {
-    background-color: var(--theme-color);
-    transition: background-color 1s ease-in-out;
+  background-color: var(--theme-color);
+  transition: background-color 1s ease-in-out;
 }
 
 footer {
-    display: block;
-    margin: 8px auto -8px auto;
-    margin-top: 8px;
-    padding: 8px;
-    text-align: center;
-    width: fit-content;
+  display: block;
+  margin: 8px auto -8px auto;
+  margin-top: 8px;
+  padding: 8px;
+  text-align: center;
+  width: fit-content;
 }
 
 footer p, #projects section, #projects section h3, #projects section h4, .oneline li, .flexline li {
-    margin: 4px;
+  margin: 4px;
 }
 
-i.fa-envelope {
-    color: #FFDC00;
+.fa-envelope {
+  color: #FFDC00;
 }
 
-i.fa-linkedin {
-    color: #0077b5;
+.fa-linkedin {
+  color: #0077b5;
 }
 
 .oneline, .flexline, #slideshow ol {
-    list-style: none;
+  list-style: none;
 }
 
 .oneline, .flexline {
-    counter-reset: counter;
-    padding: 0;
+  counter-reset: counter;
+  padding: 0;
 }
 
 .flexline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .flexline li {
-    text-align: center;
-    padding: 8px 16px;
+  text-align: center;
+  padding: 8px 16px;
 }
 
 .oneline li {
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    min-height: 100px;
-    min-width: 200px;
-    padding: 4px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  min-height: 100px;
+  min-width: 200px;
+  padding: 4px;
 }
 
 .oneline li, .flexline li {
-    background-color: #222;
-    border-radius: 5px;
-    counter-increment: counter;
-    display: inline-block;
-    position: relative;
+  background-color: #222;
+  border-radius: 5px;
+  counter-increment: counter;
+  display: inline-block;
+  position: relative;
 }
 
 ol.oneline li::before, ol.flexline li::before, .counter li::before {
-    bottom: 0;
-    color: #555;
-    content: counter(counter);
-    font-size: 4em;
-    font-weight: 900;
-    line-height: 1;
-    margin-right: 4px;
-    position: absolute;
+  bottom: 0;
+  color: #555;
+  content: counter(counter);
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1;
+  margin-right: 4px;
+  position: absolute;
 }
 
 .font-xx-small {
-    font-size: xx-small;
+  font-size: xx-small;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .animate-on {
-    animation: slide 1s 1 ease-in-out reverse both;
+  animation: slide 1s 1 ease-in-out reverse both;
 }
 
 .animate-off {
-    animation: slide 1s 1 ease-in-out both;
+  animation: slide 1s 1 ease-in-out both;
 }
 
 @keyframes slide {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(50vw);
-    }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
 }
 
 #intro-group {
-    display: inline-block;
-    margin-left: 8px;
+  display: inline-block;
+  margin-left: 8px;
 }
 
 #intro-group h2 {
-    margin: 0.23em 0 4px 0;
-    font-size: 2.2em;
+  margin: 0.23em 0 4px 0;
+  font-size: 2.2em;
 }
 
-#social i {
-    font-size: 2em;
-    margin-right: 4px;
-    text-decoration: none;
+#social {
+  font-size: 2em;
+  margin-right: 4px;
+  text-decoration: none;
 }
 
 #profile {
-    border-radius: 50%;
-    float: left;
-    transition: border-radius ease-in-out 50ms;
-    vertical-align: middle;
-    width: 100px;
+  border-radius: 50%;
+  float: left;
+  transition: border-radius ease-in-out 50ms;
+  vertical-align: middle;
+  width: 100px;
 }
 
 #profile:hover {
-    border-radius: 25%;
+  border-radius: 25%;
 }
 
 #intro {
-    clear: left;
+  clear: left;
 }
 
 #favorites li, #projects section {
-    transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
 }
 
 #favorites li {
-    background-position: center;
-    background-size: cover;
-    text-shadow: 0 0 5px black;
+  background-position: center;
+  background-size: cover;
+  text-shadow: 0 0 5px black;
 }
 
 #favorites li a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #favorite li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #favorites li:hover, #projects section:hover {
-    transform: scale(1.2);
-    z-index: 10;
+  transform: scale(1.2);
+  z-index: 10;
 }
 
 #favorites strong {
-    display: block;
+  display: block;
 }
 
 #panda {
-    /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
-    https://en.wikipedia.org/wiki/Red_panda */
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
+  /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Red_panda */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
 }
 
 #food {
-    /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
-    https://en.wikipedia.org/wiki/Dim_sum */
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
+  /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
+  https://en.wikipedia.org/wiki/Dim_sum */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
 }
 
 #lwt {
-    /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
-    original source, though it is likely originally created by HBO or John oliver's production
-    company. This image was found here:
-    https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
-    but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
-    background-image: url("img/favorites/lwt.jpg");
+  /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
+  original source, though it is likely originally created by HBO or John oliver's production
+  company. This image was found here:
+  https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
+  but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
+  background-image: url("img/favorites/lwt.jpg");
 }
 
 li#hobby {
-    /* Image citation: screenshot taken of my code by me.
-    IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
-    background-image: url("img/favorites/code.png");
+  /* Image citation: screenshot taken of my code by me.
+  IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
+  background-image: url("img/favorites/code.png");
 }
 
 #sarcasm {
-    /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
-    Per license, no attribution required, though the image was created by "TheDigitalArtist"
-    https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
-    background-image: url("img/favorites/question.jpg");
+  /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
+  Per license, no attribution required, though the image was created by "TheDigitalArtist"
+  https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
+  background-image: url("img/favorites/question.jpg");
 }
 
 
 li#sarcasm::after {
-    bottom: 4px;
-    color: #ddd;
-    content: "<joke funny=\"false\" />";
-    font-size: x-small;
-    font-weight: 600;
-    position: absolute;
-    right: 4px;
+  bottom: 4px;
+  color: #ddd;
+  content: "<joke funny=\"false\" />";
+  font-size: x-small;
+  font-weight: 600;
+  position: absolute;
+  right: 4px;
 }
 
 .classes li[id] {
-    /* use id to signify that these li's have images based on id, so other flexlist's with li's with
-    ids don't have extra padding */
-    background-size: 32px;
-    background-repeat: no-repeat;
-    background-position: 4px center;
-    padding-left: 40px;
+  /* use id to signify that these li's have images based on id, so other flexlist's with li's with
+  ids don't have extra padding */
+  background-size: 32px;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  padding-left: 40px;
 }
 
 #class-154 {
-    /* Image citation: illustration created for the CSE 154 website, taken directly from the course
-    website https://courses.cs.washington.edu/courses/cse154/19sp/ */
-    background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
-    background-size: 28%;
+  /* Image citation: illustration created for the CSE 154 website, taken directly from the course
+  website https://courses.cs.washington.edu/courses/cse154/19sp/ */
+  background-image: url("https://courses.cs.washington.edu/courses/cse154/19sp/assets/homepage-illustration.svg");
+  background-size: 28%;
 }
 
 #class-163 {
-    /* Image citation: Python logo is trademark the Python Software Foundation.
-    this rendition is created by the Tango! project team, who have released it
-    under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
-    background-size: 32%;
+  /* Image citation: Python logo is trademark the Python Software Foundation.
+  this rendition is created by the Tango! project team, who have released it
+  under license CC BY-SA 3.0 on wikimedia: https://commons.wikimedia.org/wiki/File:Python.svg */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg");
+  background-size: 32%;
 }
 
 #class-200 {
-    /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
-    background-image: url("img/classes/ischool.svg");
+  /* Image citation: iSchool logo is owned by UW iSchool, https://ischool.uw.edu/about/logos-guidelines */
+  background-image: url("img/classes/ischool.svg");
 }
 
 #class-308 {
-    /* Image citation: Found on Google Images hosted by Pngtree http://bit.ly/2MRksVr */
-    background-image: url("img/classes/matrix.png");
+  /* Image citation: Found on Google Images hosted by Pngtree http://bit.ly/2MRksVr */
+  background-image: url("img/classes/matrix.png");
 }
 
 #slideshow, #projects, #projects section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #slideshow ol {
-    height: 28vh;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 90%;
+  height: 28vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 90%;
 }
 
 #slideshow ol li {
-    height: 90%;
-    left: 0;
-    overflow: hidden auto;
-    padding: 16px;
-    position: absolute;
-    top: 0;
+  height: 90%;
+  left: 0;
+  overflow: hidden auto;
+  padding: 16px;
+  position: absolute;
+  top: 0;
 }
 
 #slideshow ol li h3 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 #slideshow ol li p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 #slideshow button {
-    background: none;
-    border: none;
-    color: #888;
-    cursor: pointer;
-    font-size: 4em;
-    transition: transform 250ms ease-in-out, color 100ms ease-in-out;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 4em;
+  transition: transform 250ms ease-in-out, color 100ms ease-in-out;
 }
 
 #slideshow button#btn-left:hover {
-    transform: translateX(-20px);
+  transform: translateX(-20px);
 }
 
 #slideshow button#btn-right:hover {
-    transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 #slideshow button:focus {
-    outline: none;
+  outline: none;
 }
 
 #projects {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 #projects section {
-    align-items: center;
-    background-color: #222;
-    background-size: cover;
-    border-radius: 8px;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 150px;
-    min-width: 400px;
+  align-items: center;
+  background-color: #222;
+  background-size: cover;
+  border-radius: 8px;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 150px;
+  min-width: 400px;
 }
 
 #projects section a {
-    border-radius: 4px;
-    padding: 4px;
-    text-decoration: none;
-    transition: background-color 250ms ease-in-out;
+  border-radius: 4px;
+  padding: 4px;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out;
 }
 
 #projects section a:hover {
-    background-color: #b96f13;
+  background-color: #b96f13;
 }
 
 #projects section:nth-child(1) {
-    /* fake overlay with gradient (image) */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/cps/wyvern.png");
-    border: solid 2px #222;
-    height: 146px;
+  /* fake overlay with gradient (image) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/cps/wyvern.png");
+  border: solid 2px #222;
+  height: 146px;
 }
 
 #projects section:nth-child(2) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/cps/super-launch-star.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/cps/super-launch-star.png");
 }
 
 #projects section:nth-child(3) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/cps/astro.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/cps/astro.png");
 }
 
 #projects section:nth-child(4) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/cps/cookie.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/cps/cookie.png");
 }
 
 #projects section:nth-child(5) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("img/cps/dulce-de-leche.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/cps/dulce-de-leche.png");
 }
