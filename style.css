@@ -60,6 +60,10 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
   color: #0077b5;
 }
 
+.fa-discord {
+  color: #7289DA;
+}
+
 .oneline, .flexline, #slideshow ol {
   list-style: none;
 }
@@ -190,53 +194,27 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   z-index: 10;
 }
 
-#favorites strong {
-  display: block;
-}
-
-#panda {
-  /* Image citation: from Wikiepedia and Wikimedia by Greg Hume under CC BY-SA 3.0
-  https://en.wikipedia.org/wiki/Red_panda */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RedPandaFullBody.JPG/320px-RedPandaFullBody.JPG");
-}
-
-#food {
-  /* Image citation: from Wikipedia and Wikimedia by ProjectManhattan under CC BY-SA 3.0
-  https://en.wikipedia.org/wiki/Dim_sum */
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dim_sum.jpg/320px-Dim_sum.jpg");
-}
-
-#lwt {
-  /* Image citation: found on Google Images. Linked from a image re-hosting site. I cannot find the
-  original source, though it is likely originally created by HBO or John oliver's production
-  company. This image was found here:
-  https://www.handerella.com/john-oliver-showcases-last-week-tonights-absurd-unused.html
-  but it is NOT ADVISED to navigate to that website due to potential NSFW content rehosted on it. */
-  background-image: url("img/favorites/lwt.jpg");
-}
-
-li#hobby {
-  /* Image citation: screenshot taken of my code by me.
-  IDE in use is IntelliJ IDEA Ultimate, created by JetBrains */
-  background-image: url("img/favorites/code.png");
-}
-
-#sarcasm {
-  /* Image citation: found on the stock image distribution site Pixabay under the Pixabay License.
-  Per license, no attribution required, though the image was created by "TheDigitalArtist"
-  https://pixabay.com/illustrations/question-mark-question-mark-symbol-1084522/ */
-  background-image: url("img/favorites/question.jpg");
-}
-
-
-li#sarcasm::after {
-  bottom: 4px;
-  color: #ddd;
-  content: "<joke funny=\"false\" />";
-  font-size: x-small;
-  font-weight: 600;
+#discord-floater {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.5em;
+  left: 2.2em;
+  opacity: 0;
+  padding: 4px;
   position: absolute;
-  right: 4px;
+  top: 5px;
+  transition: opacity 500ms linear;
+  visibility: hidden;
+}
+
+#social-discord {
+  position: relative;
+}
+
+#social-discord:hover span {
+  opacity: 1;
+  visibility: visible;
 }
 
 .classes li[id] {
