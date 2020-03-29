@@ -45,6 +45,11 @@
       "url": "https://myanimelist.net/anime/36456/Boku_no_Hero_Academia_3rd_Season"
     },
     {
+      "title": "Boku no Hero Academia 4th Season",
+      "img": "https://cdn.myanimelist.net/r/96x136/images/anime/1315/102961.webp?s=2691928071f8d47f567b431b9d0cdd2e",
+      "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season"
+    },
+    {
       "title": "Code Geass: Hangyaku no Lelouch",
       "img": "https://cdn.myanimelist.net/r/96x136/images/anime/5/50331.webp?s=9f5ae826089bc8b3fdc06e732b655614",
       "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch"
