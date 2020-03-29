@@ -1,9 +1,11 @@
 /*
   Name: Austin Jenchi
-  Date: April 2, 2019
-  Section: CSE 154 AQ 19sp
+  Date: March 29, 2020
+  Section: CSE 154 20sp
 
-  Some basic CSS styles for my about me page.
+  Some CSS styles for my about me page. Sets up styles for social icons,
+  tips and tricks slideshow, and different styles of lists and cards for
+  content.
 */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
@@ -21,17 +23,75 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
   max-width: 80%;
-  padding: 8px;
   transition: border-color 1s ease-in-out;
 }
 
 body, footer {
+  padding: 8px;
   width: fit-content;
 }
 
 h1, h2, h3, a, footer, .fa-github, .oneline li, .flexline li,
-  #slideshow ol li, #slideshow button:active, #favorites li::before {
+  #slideshow ol li, #slideshow button:active, #favorites li::before,
+  #discord-floater {
   color: white;
+}
+
+body, #favorites {
+  overflow-x: hidden;
+}
+
+p:first-of-type {
+  clear: left;
+}
+
+article, article::before, article::after {
+  background-color: #191919;
+}
+
+article, #slideshow ol li {
+  padding: 16px;
+}
+
+article, .oneline li, .flexline li, #favorites li, #social-discord, #slideshow ol {
+  position: relative;
+}
+
+article {
+  margin: 16px;
+}
+
+article::before, article::after, #favorites li a::after {
+  content: "";
+}
+
+article::before, article::after, ol.oneline li::before, ol.flexline li::before, .counter li::before,
+  #favorites li a::after, #discord-floater, #slideshow ol li {
+  position: absolute;
+}
+
+article::before, article::after, #favorites li a::after, #slideshow ol li {
+  top: 0;
+}
+
+article::before, article::after, #favorites li a::after {
+  height: 100%;
+}
+
+article::before, article::after, footer {
+  display: block;
+}
+
+article::before, article::after {
+  width: 20%;
+}
+
+article::before {
+  left: -20%;
+}
+
+article::after {
+  right: -20%;
 }
 
 footer, #slideshow ol li, #projects section a {
@@ -39,13 +99,13 @@ footer, #slideshow ol li, #projects section a {
   transition: background-color 1s ease-in-out;
 }
 
+footer, .flexline li {
+    text-align: center;
+}
+
 footer {
-  display: block;
   margin: 8px auto -8px auto;
   margin-top: 8px;
-  padding: 8px;
-  text-align: center;
-  width: fit-content;
 }
 
 footer p, #projects section, #projects section h3, #projects section h4, .oneline li, .flexline li {
@@ -66,50 +126,74 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
 
 .oneline, .flexline, #slideshow ol {
   list-style: none;
+  padding: 0;
 }
 
 .oneline, .flexline {
   counter-reset: counter;
-  padding: 0;
 }
 
-.flexline {
+.flexline, #slideshow, #projects, #projects section {
   display: flex;
+}
+
+.flexline, #projects {
   flex-wrap: wrap;
+}
+
+.flexline, #slideshow, #projects, #projects section {
   justify-content: center;
 }
 
 .flexline li {
-  text-align: center;
   padding: 8px 16px;
+}
+
+.oneline li, .classes li[id] {
+  background-repeat: no-repeat;
+}
+
+.oneline li, #discord-floater, #projects section a {
+  padding: 4px;
 }
 
 .oneline li {
   background-position: right bottom;
-  background-repeat: no-repeat;
   background-size: 25%;
   min-height: 100px;
   min-width: 200px;
-  padding: 4px;
+}
+
+.oneline li, .flexline li, #projects section {
+  background-color: #222;
+}
+
+.oneline li, .flexline li, #discord-floater {
+  border-radius: 5px;
+}
+
+.oneline li, .flexline li, #intro-group {
+  display: inline-block;
 }
 
 .oneline li, .flexline li {
-  background-color: #222;
-  border-radius: 5px;
   counter-increment: counter;
-  display: inline-block;
-  position: relative;
+}
+
+ol.oneline li::before, ol.flexline li::before, .counter li::before, #slideshow button {
+  font-size: 4em;
+}
+
+ol.oneline li::before, ol.flexline li::before, .counter li::before, #social {
+  margin-right: 4px;
 }
 
 ol.oneline li::before, ol.flexline li::before, .counter li::before {
   bottom: 0;
   color: #555;
   content: counter(counter);
-  font-size: 4em;
   font-weight: 900;
   line-height: 1;
-  margin-right: 4px;
-  position: absolute;
 }
 
 .font-xx-small {
@@ -140,7 +224,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 }
 
 #intro-group {
-  display: inline-block;
   margin-left: 8px;
 }
 
@@ -149,9 +232,7 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   font-size: 2.2em;
 }
 
-#social {
-  font-size: 2em;
-  margin-right: 4px;
+#social, #favorites li a, #projects section a {
   text-decoration: none;
 }
 
@@ -163,12 +244,14 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   width: 100px;
 }
 
-#profile:hover {
-  border-radius: 25%;
+#favorites {
+  max-height: 75vh;
+  padding-bottom: 10px;
+  overflow-y: auto;
 }
 
-#intro {
-  clear: left;
+#profile:hover {
+  border-radius: 25%;
 }
 
 #favorites li, #projects section {
@@ -176,17 +259,21 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 }
 
 #favorites li {
-  background-position: center;
-  background-size: cover;
+  background-position: right center;
+  background-size: contain;
   text-shadow: 0 0 5px black;
 }
 
-#favorites li a {
-  text-decoration: none;
+#favorites li a:hover {
+  text-decoration: underline;
 }
 
-#favorite li a:hover {
-  text-decoration: underline;
+#favorites li a::after, #slideshow ol li {
+  left: 0;
+}
+
+#favorites li a::after {
+  width: 100%;
 }
 
 #favorites li:hover, #projects section:hover {
@@ -196,20 +283,12 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 
 #discord-floater {
   background: black;
-  border-radius: 5px;
-  color: white;
   font-size: 0.5em;
   left: 2.2em;
   opacity: 0;
-  padding: 4px;
-  position: absolute;
   top: 5px;
   transition: opacity 500ms linear;
   visibility: hidden;
-}
-
-#social-discord {
-  position: relative;
 }
 
 #social-discord:hover span {
@@ -221,7 +300,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   /* use id to signify that these li's have images based on id, so other flexlist's with li's with
   ids don't have extra padding */
   background-size: 32px;
-  background-repeat: no-repeat;
   background-position: 4px center;
   padding-left: 40px;
 }
@@ -251,30 +329,19 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   background-image: url("img/classes/matrix.png");
 }
 
-#slideshow, #projects, #projects section {
-  display: flex;
-  justify-content: center;
-}
-
 #slideshow ol {
   height: 28vh;
   margin: 0;
   overflow: hidden;
-  padding: 0;
-  position: relative;
   width: 90%;
 }
 
 #slideshow ol li {
   height: 90%;
-  left: 0;
   overflow: hidden auto;
-  padding: 16px;
-  position: absolute;
-  top: 0;
 }
 
-#slideshow ol li h3 {
+#slideshow ol li h3, #social {
   font-size: 2em;
 }
 
@@ -287,7 +354,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   border: none;
   color: #888;
   cursor: pointer;
-  font-size: 4em;
   transition: transform 250ms ease-in-out, color 100ms ease-in-out;
 }
 
@@ -303,13 +369,8 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   outline: none;
 }
 
-#projects {
-  flex-wrap: wrap;
-}
-
 #projects section {
   align-items: center;
-  background-color: #222;
   background-size: cover;
   border-radius: 8px;
   flex-direction: column;
@@ -320,8 +381,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
 
 #projects section a {
   border-radius: 4px;
-  padding: 4px;
-  text-decoration: none;
   transition: background-color 250ms ease-in-out;
 }
 
