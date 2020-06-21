@@ -273,18 +273,18 @@
       }, Math.random() * 1000);
     });
     setTimeout(() => {
-        let li = gen("li");
-        // gif from the internet, tenor gif search
-        li.style.backgroundImage = "url('https://media1.tenor.com/images/44f162901b9f03ddbde93021942be503/tenor.gif?itemid=12905839')";
-        // constant styles shouldn't be set like this; a class is probably more appropriate here (but lazy)
-        li.style.backgroundSize = "cover";
-        li.style.backgroundPosition = "center center";
-        li.style.minWidth = "140px";
-        // layout issues
-        li.style.color = "transparent";
-        li.style.textShadow = "none";
-        li.textContent = ":)";
-        parent.appendChild(li);
+      // constant styles shouldn't be set like this; a class is probably more appropriate here (but lazy)
+      let li = gen("li");
+      // gif from the internet, tenor gif search
+      li.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/197492450238005248/694035787053924372/ezgif.com-gif-maker_4.gif')";
+      li.style.backgroundSize = "cover";
+      li.style.backgroundPosition = "center center";
+      li.style.minWidth = "140px";
+      // layout issues
+      li.style.color = "transparent";
+      li.style.textShadow = "none";
+      li.textContent = ":)";
+      parent.appendChild(li);
     }, 1001);
   }
 
