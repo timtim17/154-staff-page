@@ -151,7 +151,7 @@
    * Changes the slide shown by advancing by the given number. Assumes that at least one slide,
    * the current slide, is not hidden using the hidden class.
    *
-   * @param {int} [advance] - The number of slides to advance by
+   * @param {number} [advance] - The number of slides to advance by
    */
   function changeSlide(advance = 1) {
     let slides = qsa("#slideshow ol li");
