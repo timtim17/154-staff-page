@@ -1,7 +1,7 @@
 /**
  * Austin Jenchi
- * CSE 154 20sp
- * March 29, 2020
+ * June 20, 2020
+ * CSE 154 20su
  *
  * Javascript for my about me page. Handles generating elements based on information about
  * individual anime, and handles events for advancing the slideshow of tips.
