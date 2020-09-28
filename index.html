@@ -2,50 +2,61 @@
 
 <!--
   Austin Jenchi
-  June 20, 2020
-  CSE 154 20su
-
-  My about me staff page! Based off of my old CP 1.
+  09/28/2020
+  CSE 154 TA
+  Basic home page for me. Has some basic interests, details about me, and tips for the class! :wave:
 -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>About Austin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Austin Jenchi">
+    <meta name="description" content="CSE 154 staff page for Austin Jenchi.">
+    <meta name="theme-color" content="#F79A4A">
+    <link rel="icon" href="https://timtim17.github.io/img/favicon-228.png">
+    <link rel="apple-touch-icon" href="https://timtim17.github.io/img/favicon-180.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>About Austin</title> <!-- a very uncreative title -->
-    <!-- fontawesome import per https://fontawesome.com/start -->
-    <script src="https://kit.fontawesome.com/3b143cc8d1.js"></script>
+    <script src="https://kit.fontawesome.com/3b143cc8d1.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </head>
 
   <body>
-    <section>
-      <!-- picture taken of me by a volunteer FIRST Robotics photographer
-           https://www.flickr.com/photos/firstwamediacrew/38811480740/in/album-72157691052770842/ -->
-      <img src="img/profile.jpg" alt="My profile picture" id="profile">
-      <section id="intro-group">
-        <h2>Austin Jenchi</h2>
-        <div id="social">
-          <!-- social media icons are trademark to their owners, icons via FontAwesome -->
-          <span id="social-discord">
+    <object type="image/svg+xml" data="img/pdrops.svg" id="pdrops"></object>
+
+    <header>
+      <img src="img/profile.jpg" alt="Profile picture">
+      <div>
+        <h1>Austin Jenchi</h1>
+        <address>
+          <p>
+            <i class="fas fa-envelope fa-fw"></i>
+            <a href="mailto:ajenchi@uw.edu">ajenchi@uw.edu</a>
+          </p>
+
+          <p>
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <span class="strike">Seattle</span> Sammamish, WA
+          </p>
+        </address>
+        <ul class="social-list">
+          <li><a href="https://github.com/timtim17" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/in/austinjenchi" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          <li class="social-discord">
             <i class="fab fa-discord"></i>
-            <!-- instead of linking, make my username appear on hover -->
-            <span id="discord-floater">austinj9#5465</span>
-          </span>
-          <a href="https://github.com/timtim17"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/austinjenchi"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:ajenchi@uw.edu"><i class="fas fa-envelope"></i></a>
-        </div>
-      </section>
+            <span class="discord-floater">austinj9#5465</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section>
       <p>
-        Hi! I'm Austin! I'm an almost-third year student intending to major in something involving
-        tech and code! I took CSE 154 in Spring 2019, and found that I absolutely loved webdev.
-        This is my fourth quarter as a TA, and I'm looking forward to working with y'all as
-        we all figure out this quarter together :).
-      </p>
-      <p>
-        Interesting fact: This site is actually an updated version of my CP 1! You can see
-        the original as well as my other CPs down below!
+        Hi! I'm Austin. I'm a third-year student interested in programming and using code to solve
+        problems. I took CSE 154 in Spring 2019, and found that I absolutely loved webdev.
+        This is my fifth quarter as a TA, and I'm looking forward to working with y'all, even if
+        we can't be in person :).
       </p>
     </section>
 
@@ -62,7 +73,7 @@
         minimum, the CPs are a great place for you to go above and beyond, making a super awesome
         website on a topic you're passionate about. You really have the freedom to do almost
         whatever you want, and webdev has a lot to offer if you want to dive into advanced content.
-        I've seen a lot of awesome, creative, and super cool projects as CPs, and I'm looking
+        I've seen a lot of awesome, creative, and super cool projects as CPs, and I'm looking forward
         to seeing what you all create!
       </p>
     </section>
@@ -70,7 +81,7 @@
     <section>
       <h2>Advice &amp; Tips for CSE 154</h2>
       <div id="slideshow">
-        <button type="button" id="btn-left">
+        <button type="button" id="btn-left" aria-label="Advance Slideshow Left">
           <i class="fas fa-angle-left"></i>
         </button>
         <ol>
@@ -126,7 +137,7 @@
             </p>
           </li>
         </ol>
-        <button type="button" id="btn-right">
+        <button type="button" id="btn-right" aria-label="Advance Slideshow Right">
           <i class="fas fa-angle-right"></i>
         </button>
       </div>
@@ -136,27 +147,12 @@
       <h2>Some stuff about me</h2>
 
       <section>
-        <h3>Anime I've watched recently</h3>
-        <p>
-          With everyone staying home a lot more recently, I've ended up watching more anime!
-          Here's some anime that I've watched recently and liked! Images belong to the
-          respective show, information sourced from <a href="https://myanimelist.net/">MyAnimeList</a>.
-        </p>
-        <ul class="oneline" id="favorites">
-          <!-- filled by javascript -->
-          <li>
-            <i class="fas fa-spinner fa-spin"></i>
-          </li>
-        </ul>
-      </section>
-
-      <section>
         <h3>Classes I'm currently taking</h3>
-        <p>None! :)</p>
-        <!--
-          <ol class="oneline classes">
-          </ol>
-        -->
+        <ol class="oneline classes">
+          <li>JAPAN 101</li>
+          <li>INFO 448</li>
+          <li>DXARTS 200</li>
+        </ol>
       </section>
 
       <section>

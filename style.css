@@ -1,48 +1,120 @@
 /*
-  Name: Austin Jenchi
-  Date: June 20, 2020
-  Section: CSE 154 20su
+  Austin Jenchi
+  09/28/2020
+  CSE 154 TA
 
   Some CSS styles for my about me page. Sets up styles for social icons,
   tips and tricks slideshow, and different styles of lists and cards for
   content.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
-
-:root {
-  --theme-color: #ff991a;
-}
-
 body {
   background-color: #333;
-  border: var(--theme-color) 10px solid;
-  border-left: 0;
-  border-right: 0;
-  color: #ccc;
   font-family: "Source Sans Pro", sans-serif;
-  margin: 0 auto;
-  max-width: 80%;
-  transition: border-color 1s ease-in-out;
-}
-
-body, footer {
-  padding: 8px;
-  width: fit-content;
-}
-
-h1, h2, h3, a, footer, .fa-github, .oneline li, .flexline li,
-  #slideshow ol li, #slideshow button:active, #favorites li::before,
-  #discord-floater {
   color: white;
-}
-
-body, #favorites {
+  margin-top: 10%;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  padding: 0 10vw;
+  font-size: 14pt;
   overflow-x: hidden;
 }
 
-p:first-of-type {
-  clear: left;
+.fontawesome-i2svg-active body {
+  opacity: 1;
+}
+
+header {
+  font-size: 16pt;
+}
+
+header, header > div, .flexline, #slideshow, #projects, #projects section {
+  display: flex;
+}
+
+header, .flexline, #projects {
+  flex-wrap: wrap;
+}
+
+header > img {
+  width: min(35vw, 200px);
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 16px;
+  transition: border-radius 100ms ease;
+  flex-shrink: 0;
+}
+
+header > img:hover {
+  border-radius: 20%;
+}
+
+header h1, header .social-list svg {
+  font-size: 1.7em;
+}
+
+header > div {
+  flex-direction: column;
+}
+
+header > div > *, header address p {
+  margin: 4px 0;
+}
+
+header address {
+  font-style: normal;
+}
+
+header address svg {
+  margin-right: 4px;
+}
+
+a {
+  text-decoration: none;
+  transition: border-bottom-color 100ms ease;
+}
+
+a, a:visited {
+  color: inherit;
+}
+
+a:hover {
+  border-bottom-color: #fff;
+}
+
+header a {
+  border-bottom: 2px solid transparent;
+}
+
+.social-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: auto;
+}
+
+.social-list li {
+  display: inline;
+  margin: 0 4px;
+}
+
+.social-discord {
+  position: relative;
+}
+
+.discord-floater {
+  background-color: #7289DA;
+  border-radius: 5px;
+  font-size: 1em;
+  left: 40px;
+  transform: scale(0);
+  padding: 4px;
+  position: absolute;
+  top: -10px;
+  transition: transform 100ms ease-out;
+}
+
+.social-discord:hover .discord-floater {
+  transform: scale(1);
 }
 
 article, article::before, article::after {
@@ -53,7 +125,7 @@ article, #slideshow ol li {
   padding: 16px;
 }
 
-article, .oneline li, .flexline li, #favorites li, #social-discord, #slideshow ol {
+article, .oneline li, .flexline li, #slideshow ol {
   position: relative;
 }
 
@@ -61,28 +133,19 @@ article {
   margin: 16px;
 }
 
-article::before, article::after, #favorites li a::after {
-  content: "";
-}
-
 article::before, article::after, ol.oneline li::before, ol.flexline li::before, .counter li::before,
-  #favorites li a::after, #discord-floater, #slideshow ol li {
+  #favorites li a::after, #slideshow ol li {
   position: absolute;
 }
 
-article::before, article::after, #favorites li a::after, #slideshow ol li {
+article::before, article::after, #slideshow ol li {
   top: 0;
 }
 
-article::before, article::after, #favorites li a::after {
-  height: 100%;
-}
-
-article::before, article::after, footer {
-  display: block;
-}
-
 article::before, article::after {
+  content: "";
+  height: 100%;
+  display: block;
   width: 20%;
 }
 
@@ -94,26 +157,18 @@ article::after {
   right: -20%;
 }
 
-footer, #slideshow ol li, #projects section a {
-  background-color: var(--theme-color);
-  transition: background-color 1s ease-in-out;
-}
-
 footer, .flexline li {
-    text-align: center;
+  text-align: center;
 }
 
 footer {
+  padding: 8px;
   margin: 8px auto -8px auto;
   margin-top: 8px;
 }
 
 footer p, #projects section, #projects section h3, #projects section h4, .oneline li, .flexline li {
   margin: 4px;
-}
-
-.fa-envelope {
-  color: #FFDC00;
 }
 
 .fa-linkedin {
@@ -134,14 +189,6 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
 }
 
 .flexline, #slideshow, #projects, #projects section {
-  display: flex;
-}
-
-.flexline, #projects {
-  flex-wrap: wrap;
-}
-
-.flexline, #slideshow, #projects, #projects section {
   justify-content: center;
 }
 
@@ -153,7 +200,7 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
   background-repeat: no-repeat;
 }
 
-.oneline li, #discord-floater, #projects section a {
+.oneline li, #projects section a {
   padding: 4px;
 }
 
@@ -168,27 +215,18 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
   background-color: #222;
 }
 
-.oneline li, .flexline li, #discord-floater {
-  border-radius: 5px;
-}
-
-.oneline li, .flexline li, #intro-group {
-  display: inline-block;
-}
-
 .oneline li, .flexline li {
+  border-radius: 5px;
+  display: inline-block;
   counter-increment: counter;
 }
 
-ol.oneline li::before, ol.flexline li::before, .counter li::before, #slideshow button {
+ol.oneline li::before, ol.flexline li::before, #slideshow button {
   font-size: 4em;
 }
 
-ol.oneline li::before, ol.flexline li::before, .counter li::before, #social {
+ol.oneline li::before, ol.flexline li::before {
   margin-right: 4px;
-}
-
-ol.oneline li::before, ol.flexline li::before, .counter li::before {
   bottom: 0;
   color: #555;
   content: counter(counter);
@@ -196,8 +234,8 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   line-height: 1;
 }
 
-.font-xx-small {
-  font-size: xx-small;
+.strike {
+  text-decoration: line-through;
 }
 
 .hidden {
@@ -223,77 +261,8 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   }
 }
 
-#intro-group {
-  margin-left: 8px;
-}
-
-#intro-group h2 {
-  margin: 0.23em 0 4px 0;
-  font-size: 2.2em;
-}
-
-#social, #favorites li a, #projects section a {
-  text-decoration: none;
-}
-
-#profile {
-  border-radius: 50%;
-  float: left;
-  transition: border-radius ease-in-out 50ms;
-  vertical-align: middle;
-  width: 100px;
-}
-
-#favorites {
-  max-height: 75vh;
-  padding-bottom: 10px;
-  overflow-y: auto;
-}
-
-#profile:hover {
-  border-radius: 25%;
-}
-
-#favorites li, #projects section {
-  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
-}
-
-#favorites li {
-  background-position: right center;
-  background-size: contain;
-  text-shadow: 0 0 5px black;
-}
-
-#favorites li a:hover {
-  text-decoration: underline;
-}
-
-#favorites li a::after, #slideshow ol li {
-  left: 0;
-}
-
-#favorites li a::after {
-  width: 100%;
-}
-
-#favorites li:hover, #projects section:hover {
-  transform: scale(1.2);
-  z-index: 10;
-}
-
-#discord-floater {
-  background: black;
-  font-size: 0.5em;
-  left: 2.2em;
-  opacity: 0;
-  top: 5px;
-  transition: opacity 500ms linear;
-  visibility: hidden;
-}
-
-#social-discord:hover span {
-  opacity: 1;
-  visibility: visible;
+.classes {
+  font-size: initial;
 }
 
 .classes li[id] {
@@ -329,20 +298,42 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   background-image: url("img/classes/matrix.png");
 }
 
+#pdrops {
+  position: absolute;
+  right: 7%;
+  top: calc(-1 * 147.97 * 30vw / 399);
+  width: 30vw;
+  transition: top 500ms ease;
+}
+
+.fontawesome-i2svg-active #pdrops {
+  top: 0;
+}
+
+#slideshow ol li, #projects section a {
+  background-color: #F79A4A;
+  transition: background-color 1s ease-in-out;
+}
+
+#slideshow ol li {
+  left: 0;
+}
+
 #slideshow ol {
-  height: 28vh;
+  height: 40vh;
   margin: 0;
   overflow: hidden;
   width: 90%;
 }
 
 #slideshow ol li {
-  height: 90%;
+  height: 100%;
   overflow: hidden auto;
 }
 
-#slideshow ol li h3, #social {
+#slideshow ol li h3 {
   font-size: 2em;
+  margin-top: 0.7em;
 }
 
 #slideshow ol li p {
@@ -377,6 +368,16 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   flex-grow: 1;
   height: 150px;
   min-width: 400px;
+  transition: transform 100ms cubic-bezier(0.85,-1.01, 0.21, 2.14);
+}
+
+#projects section:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+#projects section h4 {
+  color: #ccc;
 }
 
 #projects section a {
@@ -392,8 +393,6 @@ ol.oneline li::before, ol.flexline li::before, .counter li::before {
   /* fake overlay with gradient (image) */
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("img/cps/wyvern.png");
-  border: solid 2px #222;
-  height: 146px;
 }
 
 #projects section:nth-child(2) {
