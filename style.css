@@ -423,15 +423,21 @@ ol.oneline li::before, ol.flexline li::before {
   justify-content: center;
 }
 
+#game-grid > *, #anime-list > * {
+  background-color: #F79A4A;
+}
+
 #game-grid > * {
   grid-column: span 2;
-  background-color: #F79A4A;
+}
+
+#game-grid img, #anime-list img {
+  height: 100%;
+  transition: transform 50ms ease-out;
 }
 
 #game-grid img {
   width: 100%;
-  height: 100%;
-  transition: transform 50ms ease-out;
 }
 
 #game-grid > *:hover img {
@@ -446,9 +452,31 @@ ol.oneline li::before, ol.flexline li::before {
   transform: scale(1.05) rotate(-2.5deg) translate(-20px, -20px);
 }
 
+#anime-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#anime-list > *, #anime-list img {
+  height: 30vh;
+}
+
+#anime-list > *:hover img {
+  transform: translateY(10px);
+}
+
 @media screen and (max-width: 1000px) {
   #game-grid {
     grid-template-columns: repeat(2, 30vw);
     grid-template-rows: repeat(6, 30vw);
+  }
+
+  #anime-list {
+    justify-content: center;
+  }
+
+  #anime-list > * {
+    margin: 8px;
   }
 }
