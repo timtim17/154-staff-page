@@ -421,6 +421,7 @@ ol.oneline li::before, ol.flexline li::before {
   grid-template-rows: repeat(2, 10vw);
   grid-gap: 8px;
   justify-content: center;
+  position: relative;
 }
 
 #game-grid > *, #anime-list > * {
@@ -439,7 +440,7 @@ ol.oneline li::before, ol.flexline li::before {
   width: 100%;
 }
 
-#game-grid > *:hover img {
+#game-grid > * > img:hover {
   transform: scale(1.1) rotate(-2.5deg) translate(-10px, -10px);
 }
 
@@ -447,8 +448,24 @@ ol.oneline li::before, ol.flexline li::before {
   grid-row: span 2;
 }
 
-#game-grid > .game-big:hover img {
+#game-grid > .game-big:hover > img {
   transform: scale(1.05) rotate(-2.5deg) translate(-20px, -20px);
+}
+
+.game-card {
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  height: 100%;
+  max-height: 4px;
+  width: 100%;
+  background-color: #F79A4A;
+  transition: max-height 1s ease-in-out;
+  overflow: hidden;
+}
+
+#game-grid > *:hover .game-card {
+  max-height: 100vh;
 }
 
 #anime-list {
