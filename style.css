@@ -454,12 +454,13 @@ ol.oneline li::before, ol.flexline li::before {
 
 #anime-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 #anime-list > *, #anime-list img {
   height: 30vh;
+  margin: auto;
 }
 
 #anime-list > *:hover img {
