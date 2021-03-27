@@ -1,6 +1,6 @@
 /**
  * Austin Jenchi
- * 09/28/2020
+ * 03/27/2021
  * CSE 154 TA
  *
  * Javascript for my about me page. Handles events for advancing the slideshow of tips.
@@ -97,15 +97,5 @@
    */
   function qsa(selector) {
     return document.querySelectorAll(selector);
-  }
-
-  /**
-   * Generates the element of the given type.
-   *
-   * @param {string} type - The type of HTML element
-   * @returns {HTMLElement} The generated element
-   */
-  function gen(type) {
-    return document.createElement(type);
   }
 })();
