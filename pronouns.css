@@ -1,0 +1,29 @@
+.pronoun-he, .pronoun-they {
+  color: #fff;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 30px;
+  padding: 4px 8px;
+  font-size: 12pt;
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+
+.pronoun-he {
+  background-color: #4ca8f9;
+}
+
+.pronoun-they {
+  background-color: #cd9ef4;
+}
+
+.pronoun-he.pronoun-pastel {
+  background-color: #e0d7ff;
+  color: #5a4995;
+}
+
+.pronoun-they.pronoun-pastel {
+  background-color: #ccf1ff;
+  color: #375a88;
+}
