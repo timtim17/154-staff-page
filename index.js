@@ -7,6 +7,10 @@
  */
 "use strict";
 
+/*global
+  AOS
+*/
+
 (function() {
   const CLASS_HIDDEN = "hidden";
   const CLASS_SLIDE_ON = "animate-on";
@@ -24,6 +28,9 @@
     id("btn-right").addEventListener("click", () => changeSlide()); // default param
     window.addEventListener('beforeunload', () => {
       document.getElementById('pdrops').contentWindow.dispatchEvent(new CustomEvent("pdrops"));
+    });
+    AOS.init({
+      once: true
     });
   }
 
