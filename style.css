@@ -423,7 +423,7 @@ ol.oneline li::before, ol.flexline li::before {
   position: relative;
 }
 
-#game-grid > *, #anime-list > * {
+#game-grid > a > div, #anime-list > *, .game-card {
   background-color: #F79A4A;
 }
 
@@ -439,7 +439,7 @@ ol.oneline li::before, ol.flexline li::before {
   width: 100%;
 }
 
-#game-grid > * > img:hover {
+#game-grid div > img:hover {
   transform: scale(1.1) rotate(-2.5deg) translate(-10px, -10px);
 }
 
@@ -447,7 +447,7 @@ ol.oneline li::before, ol.flexline li::before {
   grid-row: span 2;
 }
 
-#game-grid > .game-big:hover > img {
+#game-grid .game-big:hover div > img {
   transform: scale(1.05) rotate(-2.5deg) translate(-20px, -20px);
 }
 
@@ -456,10 +456,10 @@ ol.oneline li::before, ol.flexline li::before {
   left: 10vw;
   right: 10vw;
   top: 22vw;
-  background-color: #F79A4A;
   transition: opacity 500ms ease-in-out;
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 
 #game-grid > *:hover .game-card {
