@@ -501,3 +501,17 @@ ol.oneline li::before, ol.flexline li::before {
     display: none;
   }
 }
+
+@media screen and (min-width: 1140px) {
+  #game-grid a[href*="genshin"] .game-card {
+    left: 15vw;
+    right: 15vw;
+  }
+}
+
+@media screen and (min-width: 1630px) {
+  #game-grid .game-card {
+    left: 20vw !important;
+    right: 20vw !important;
+  }
+}
