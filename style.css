@@ -454,18 +454,16 @@ ol.oneline li::before, ol.flexline li::before {
 
 .game-card {
   position: absolute;
-  left: 0;
-  bottom: -12px;
-  height: 100%;
-  max-height: 4px;
-  width: 100%;
+  left: 10vw;
+  right: 10vw;
+  top: 22vw;
   background-color: #F79A4A;
-  transition: max-height 1s ease-in-out;
-  overflow: hidden;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
 }
 
 #game-grid > *:hover .game-card {
-  max-height: 100vh;
+  opacity: 1;
 }
 
 #anime-list {
@@ -495,5 +493,9 @@ ol.oneline li::before, ol.flexline li::before {
 
   #anime-list > * {
     margin: 8px;
+  }
+
+  .game-card {
+    display: none;
   }
 }
