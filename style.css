@@ -460,10 +460,12 @@ ol.oneline li::before, ol.flexline li::before {
   background-color: #F79A4A;
   transition: opacity 500ms ease-in-out;
   opacity: 0;
+  visibility: hidden;
 }
 
 #game-grid > *:hover .game-card {
   opacity: 1;
+  visibility: visible;
 }
 
 #anime-list {
