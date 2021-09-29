@@ -105,7 +105,7 @@ header a {
   background-color: #7289DA;
   border-radius: 5px;
   font-size: 1em;
-  left: 40px;
+  left: 50px;
   transform: scale(0);
   padding: 4px;
   position: absolute;
@@ -416,7 +416,7 @@ ol.oneline li::before, ol.flexline li::before {
 
 #game-grid {
   display: grid;
-  grid-template-columns: repeat(6, 10vw);
+  grid-template-columns: repeat(7, 10vw);
   grid-template-rows: repeat(2, 10vw);
   grid-gap: 8px;
   justify-content: center;
@@ -439,16 +439,36 @@ ol.oneline li::before, ol.flexline li::before {
   width: 100%;
 }
 
-#game-grid div > img:hover {
+#game-grid :not(#game-wacca) div > img:hover {
   transform: scale(1.1) rotate(-2.5deg) translate(-10px, -10px);
 }
 
-#game-grid .game-big {
+#game-grid .game-big, #game-wacca {
   grid-row: span 2;
 }
 
 #game-grid .game-big:hover div > img {
   transform: scale(1.05) rotate(-2.5deg) translate(-20px, -20px);
+}
+
+#game-wacca {
+  grid-column: span 1;
+}
+
+#game-wacca div:first {
+  position: relative;
+}
+
+#game-wacca img:nth-of-type(2) {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  transition-duration: 250ms;
+}
+
+#game-wacca:hover img:nth-of-type(2) {
+  transform: rotate(350deg) scale(1.5);
 }
 
 .game-card {
@@ -486,6 +506,17 @@ ol.oneline li::before, ol.flexline li::before {
   #game-grid {
     grid-template-columns: repeat(2, 30vw);
     grid-template-rows: repeat(6, 30vw);
+  }
+
+  #game-wacca {
+    grid-column: span 2;
+  }
+
+  #game-wacca div:first-of-type {
+    background: url('img/games/wacca-square.png') no-repeat;
+    background-size: cover;
+    padding-left: 100%;
+    height: 100%;
   }
 
   #anime-list {
