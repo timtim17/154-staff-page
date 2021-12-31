@@ -471,6 +471,19 @@ ol.oneline li::before, ol.flexline li::before {
   transform: rotate(350deg) scale(1.5);
 }
 
+#game-chaos {
+  position: relative;
+}
+
+#game-chaos .game-card {
+  font-size: 0.8rem;
+  left: 0;
+  right: 0;
+  top: initial;
+  bottom: -1.2rem;
+  text-align: center;
+}
+
 .game-card {
   position: absolute;
   left: 10vw;
@@ -494,7 +507,7 @@ ol.oneline li::before, ol.flexline li::before {
 }
 
 #anime-list > *, #anime-list img {
-  height: 30vh;
+  height: 10.7rem;
   margin: auto;
 }
 
