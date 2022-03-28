@@ -1,6 +1,6 @@
 /*
   Austin Jenchi
-  12/31/2021
+  3/27/2022
   CSE 154 TA
 
   Some CSS styles for my about me page. Sets up styles for social icons,
@@ -97,26 +97,6 @@ header a {
   margin: 0 4px;
 }
 
-.social-discord {
-  position: relative;
-}
-
-.discord-floater {
-  background-color: #7289DA;
-  border-radius: 5px;
-  font-size: 1em;
-  left: 50px;
-  transform: scale(0);
-  padding: 4px;
-  position: absolute;
-  top: -10px;
-  transition: transform 100ms ease-out;
-}
-
-.social-discord:hover .discord-floater {
-  transform: scale(1);
-}
-
 article, article::before, article::after {
   background-color: #191919;
 }
@@ -173,10 +153,6 @@ footer p, #projects section, #projects section h3, #projects section h4, .onelin
 
 .fa-linkedin {
   color: #0077b5;
-}
-
-.fa-discord {
-  color: #7289DA;
 }
 
 .oneline, .flexline, #slideshow ol {
